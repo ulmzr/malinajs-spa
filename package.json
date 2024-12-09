@@ -1,6 +1,6 @@
 {
   "name": "@dififa/malinajs-spa",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A minimalistic version of MalinaJS development server with Bun.",
   "author": "Yulmizar",
   "module": "index.js",
