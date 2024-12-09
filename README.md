@@ -23,7 +23,7 @@ bunserv({
 	esbuildOptions: {} // default
 });
 ```
-### Project tree example
+## Project tree example
 ```
 malina-project/
 ├── public/                 # Directory for static files
