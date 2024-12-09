@@ -1,15 +1,12 @@
 {
   "name": "@dififa/malinajs-spa",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A minimalistic version of MalinaJS development server with Bun.",
   "author": "Yulmizar",
   "module": "index.js",
-  "devDependencies": {
+  "dependencies": {
     "esbuild": "^0.24.0",
     "malinajs": "^0.7.19"
   },
-  "type": "module",
-  "dependencies": {
-    "@dififa/malinajs-spa": "."
-  }
+  "type": "module"
 }
