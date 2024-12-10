@@ -85,11 +85,16 @@ async function bunserv(options = {}) {
                 }
 
                 // logic
-                const pathname = new URL(request.url).pathname.replace(/\/$/, 'index.html')
-                const index = Bun.file(join(publicDir, 'index.html'))
-                const file = Bun.file(join(publicDir, pathname))
-                if (await file.exists()) return response(dev ? await addScript(file) : file)
-                return response(await addScript(index))
+                try {
+                    const pathname = new URL(request.url).pathname.replace(/\/$/, 'index.html')
+                    const index = Bun.file(join(publicDir, 'index.html'))
+                    const file = Bun.file(join(publicDir, pathname))
+                    if (await file.exists()) return response(dev ? await addScript(file) : file)
+                    return response(await addScript(index))
+                } catch (e) {
+                    console.error(e)
+                    return new Response('404 | Not Found')
+                }
             },
             websocket: {
                 open: async (ws) => {
